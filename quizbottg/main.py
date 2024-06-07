@@ -2,12 +2,13 @@ import asyncio
 import json
 import logging
 import random
+import sys
 
 from aiogram import Bot, Dispatcher, F, types
 from aiogram.filters.command import Command
 
 logging.basicConfig(level=logging.INFO)
-bot = Bot(token="7134372127:AAECT7D3UtvlJAL7DagNpZQwsXWRTkF6Oyw")
+bot = Bot(token=sys.argv[1])
 dp = Dispatcher()
 
 with open("questions.json", "r", encoding="utf-8") as file:
